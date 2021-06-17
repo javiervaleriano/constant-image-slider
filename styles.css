@@ -1,0 +1,123 @@
+main {
+    margin-top: 10vh;
+    padding: 0 .8em;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Mate SC', serif;
+    text-transform: capitalize;
+}
+
+h2 { font-family: 'Benne', serif; }
+
+.img-container {
+    max-width: 100%;
+    width: 35em;
+    height: 18em;
+    margin: 0 auto;
+    overflow: hidden;
+    
+    position: relative;
+    
+    border: 2px solid #6A5ACD;
+    
+    -webkit-border-radius: .2em;
+    -moz-border-radius: .2em;
+    border-radius: .2em;
+}
+
+.slide {
+    position: absolute;
+    
+    width: 100%;
+    height: 100%;
+    
+    overflow: hidden;
+    
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    
+    transform: translateX(0%);
+}
+
+.slide:first-child {
+    left: 0%;
+}
+
+.slide:nth-child(2) {
+    left: 100%;
+}
+
+.slide:nth-child(3) {
+    left: 200%;
+}
+
+.slide:nth-child(4) {
+    left: 300%;
+}
+
+.slide:nth-child(5) {
+    left: 400%;
+}
+
+.slide:nth-child(6) {
+    left: 500%;
+}
+
+.image {
+    -o-object-fit: fill;
+    object-fit: fill;
+    
+    width: 100%;
+    height: 100%;
+}
+
+.control-container {
+    margin-top: 1em;
+    
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.control {
+    margin: .4em;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    color: #483D8B;
+    display: none;
+}
+
+.control:hover {
+    color: #fff;
+    background-color: #6A5ACD;
+    
+    -webkit-border-radius: .15em;
+    -moz-border-radius: .15em;
+    border-radius: .15em;
+}
+
+.show { display: inline-block; }
+
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+    main { margin-top: 2em; }
+    
+    h1 { margin: 0; }
+    
+    .img-container { height: 11em; }
+    
+    @media only screen and (orientation: landscape) {
+        .img-container { width: 23em; }
+    }
+}
